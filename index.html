@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>William Silva - Web Designer Estratégico</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <style>
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Inter', sans-serif; background-color: #111827; }
+
+        /* Cor de destaque da logo */
+        :root { --accent-color: #E85D4A; }
+        .accent-text { color: var(--accent-color); }
+        .accent-border { border-color: var(--accent-color); }
+        
+        /* Animações de entrada */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.6s ease-out;
+        }
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Efeito de brilho no card do portfólio */
+        .portfolio-card:hover .portfolio-overlay {
+            opacity: 1;
+        }
+        .portfolio-card:hover img {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body class="text-gray-300">
+
+    <!-- Cabeçalho -->
+    <header class="bg-white/90 backdrop-blur-lg sticky top-0 z-50 shadow-md">
+        <nav class="container mx-auto px-6 py-1 flex justify-between items-center">
+            <a href="#">
+                <img src="https://i.ibb.co/8D2DB6hf/Web-Designer.png" alt="Logo William Silva Web Designer" class="h-16 md:h-20 w-auto">
+            </a>
+            <div class="hidden md:flex space-x-8 items-center text-sm font-medium">
+                <a href="#quemsou" class="text-gray-700 hover:accent-text transition-colors">Quem Sou</a>
+                <a href="#portfolio" class="text-gray-700 hover:accent-text transition-colors">Projetos</a>
+                <a href="#vantagens" class="text-gray-700 hover:accent-text transition-colors">Vantagens</a>
+                <a href="#processo" class="text-gray-700 hover:accent-text transition-colors">Processo</a>
+                <a href="#contato" class="bg-green-500 text-white px-5 py-2 rounded-md hover:bg-green-600 transition-colors">
+                    Fale Comigo
+                </a>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden p-2">
+                <svg class="w-6 h-6 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </nav>
+         <!-- Menu Mobile -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white p-4 border-t border-gray-200">
+            <a href="#quemsou" class="block py-2 text-center text-gray-700 hover:accent-text transition-colors">Quem Sou</a>
+            <a href="#portfolio" class="block py-2 text-center text-gray-700 hover:accent-text transition-colors">Projetos</a>
+            <a href="#vantagens" class="block py-2 text-center text-gray-700 hover:accent-text transition-colors">Vantagens</a>
+            <a href="#processo" class="block py-2 text-center text-gray-700 hover:accent-text transition-colors">Processo</a>
+            <a href="#contato" class="block mt-2 text-center bg-green-500 text-white px-5 py-2 rounded-md hover:bg-green-600 transition-colors">Fale Comigo</a>
+        </div>
+    </header>
+
+    <!-- Seção Hero -->
+    <main id="home" class="relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-900 to-black z-0"></div>
+        <div class="container mx-auto px-6 pt-20 pb-32 md:pt-32 md:pb-40 relative z-10">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="text-center md:text-left">
+                    <h1 class="text-4xl md:text-6xl font-black text-white leading-tight mb-4">
+                        Seu negócio merece um site <span class="accent-text">incrível</span>.
+                    </h1>
+                    <p class="text-lg md:text-xl text-gray-400 mb-8 max-w-xl">
+                        Eu crio sites estáticos de alta performance que são rápidos, seguros e projetados para transformar visitantes em clientes.
+                    </p>
+                    <a href="#contato" class="bg-green-500 text-white font-bold py-4 px-10 rounded-lg text-lg hover:bg-green-600 transition shadow-lg shadow-green-500/20">
+                        Quero um site que vende
+                    </a>
+                </div>
+                <div class="relative flex justify-center">
+                    <div class="absolute -inset-2 bg-gradient-to-r from-red-600 to-orange-500 rounded-full opacity-20 blur-3xl"></div>
+                    <img src="https://i.ibb.co/gMHZz8f6/1729033332226.jpg" alt="Foto de William Silva" class="w-72 h-72 md:w-80 md:h-80 rounded-full object-cover border-4 border-gray-700 shadow-2xl relative">
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <!-- Seção Quem Sou -->
+    <section id="quemsou" class="bg-gray-900 py-20 md:py-28">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto text-center reveal">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">Prazer, sou William Silva.</h2>
+                <p class="text-lg text-gray-400 leading-relaxed mb-6">
+                    Formado em Marketing e com 8 anos de atuação na área. Atualmente, trabalho como assistente de publicidade no departamento regional do Sesc-RS e também como desenvolvedor front-end freelancer, criando sites modernos, funcionais e responsivos.
+                </p>
+                <p class="text-lg text-gray-400 leading-relaxed mb-8">
+                    Tenho experiência em criação de artes gráficas, além de conhecimento em SEO e gestão de tráfego, o que me permite entregar soluções completas, que aliam estética, desempenho e resultados.
+                </p>
+                <div class="flex justify-center space-x-6">
+                    <a href="https://www.instagram.com/willssilveira/" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition-colors" aria-label="Instagram">
+                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" role="img">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.85s-.011 3.584-.069 4.85c-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07s-3.584-.012-4.85-.07c-3.252-.148-4.771-1.691-4.919-4.919-.058-1.265-.069-1.645-.069-4.85s.011-3.584.069-4.85c.149-3.225 1.664-4.771 4.919-4.919C8.416 2.175 8.796 2.163 12 2.163m0-2.163C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12s.014 3.667.072 4.947c.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24s3.667-.014 4.947-.072c4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.947s-.014-3.667-.072-4.947c-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zM12 16c-2.209 0-4-1.791-4-4s1.791-4 4-4 4 1.791 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44 1.441-.645 1.441-1.44-.645-1.44-1.441-1.44z"></path>
+                        </svg>
+                    </a>
+                    <a href="https://www.linkedin.com/in/williamssilveira/" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition-colors" aria-label="LinkedIn">
+                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" role="img">
+                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5V5c0-2.761-2.238-5-5-5zM8 19H5V8h3v11zM6.5 6.732c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zM20 19h-3v-5.604c0-3.368-4-3.113-4 0V19h-3V8h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Portfólio -->
+    <section id="portfolio" class="bg-gray-800 py-20 md:py-28">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 reveal">
+                <h2 class="text-3xl md:text-4xl font-bold text-white">Projetos Recentes</h2>
+                <p class="text-gray-400 mt-2">Uma seleção dos meus trabalhos mais recentes.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                <!-- Projeto 1 -->
+                <a href="https://wssilveira.github.io/clinica_podologica_pe_saudavel/" target="_blank" class="block rounded-xl overflow-hidden group portfolio-card reveal">
+                    <div class="relative overflow-hidden">
+                        <img src="https://i.ibb.co/QjNt77QM/Site.png" alt="Preview do site da Clínica Podológica Pé Saudável" class="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105">
+                        <div class="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 transition-opacity duration-500 portfolio-overlay">
+                            <span class="text-white border-2 border-white px-6 py-2 rounded-full">Ver Projeto</span>
+                        </div>
+                    </div>
+                    <div class="bg-gray-900 p-6">
+                        <h3 class="text-xl font-bold text-white">Clínica Podológica Pé Saudável</h3>
+                        <p class="text-gray-400 mt-1">Desenvolvimento de um site clean e intuitivo, focado em transmitir confiança e facilitar o agendamento de consultas para a clínica.</p>
+                    </div>
+                </a>
+                <!-- Projeto 2 -->
+                <a href="https://wssilveira.github.io/navalha_de_ouro/" target="_blank" class="block rounded-xl overflow-hidden group portfolio-card reveal">
+                     <div class="relative overflow-hidden">
+                        <img src="https://i.ibb.co/bMHrHSSw/Site.png" alt="Preview do site da barbearia Navalha de Ouro" class="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105">
+                        <div class="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 transition-opacity duration-500 portfolio-overlay">
+                            <span class="text-white border-2 border-white px-6 py-2 rounded-full">Ver Projeto</span>
+                        </div>
+                    </div>
+                    <div class="bg-gray-900 p-6">
+                        <h3 class="text-xl font-bold text-white">Barbearia Navalha de Ouro</h3>
+                        <p class="text-gray-400 mt-1">Criação de uma identidade visual forte e masculina, alinhada ao posicionamento premium da barbearia para atrair o público certo.</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Vantagens -->
+    <section id="vantagens" class="bg-gray-900 py-20 md:py-28">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 reveal">
+                <h2 class="text-3xl md:text-4xl font-bold text-white">A Vantagem Competitiva para o seu Negócio</h2>
+                <p class="text-gray-400 mt-2">Por que um site estático é a melhor escolha para você.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Vantagem 1 -->
+                <div class="bg-gray-800 p-8 rounded-xl border border-gray-700 reveal">
+                    <svg class="w-10 h-10 accent-text mb-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
+                    </svg>
+                    <h3 class="text-xl font-bold text-white mb-2">Velocidade de Carregamento</h3>
+                    <p class="text-gray-400">Sites estáticos são super rápidos porque entregam arquivos fixos, sem processar nada no servidor. Isso melhora a experiência do usuário e ajuda no SEO.</p>
+                </div>
+                <!-- Vantagem 2 -->
+                <div class="bg-gray-800 p-8 rounded-xl border border-gray-700 reveal" style="transition-delay: 150ms;">
+                    <svg class="w-10 h-10 accent-text mb-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.286zm0 13.036h.008v.008h-.008v-.008z" />
+                    </svg>
+                    <h3 class="text-xl font-bold text-white mb-2">Segurança</h3>
+                    <p class="text-gray-400">Como não têm banco de dados nem backend dinâmico, são menos vulneráveis a ataques como injeção de código ou invasões, o que reduz riscos.</p>
+                </div>
+                <!-- Vantagem 3 -->
+                <div class="bg-gray-800 p-8 rounded-xl border border-gray-700 reveal" style="transition-delay: 300ms;">
+                     <svg class="w-10 h-10 accent-text mb-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m-3-2.818l.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <h3 class="text-xl font-bold text-white mb-2">Custo Baixo de Hospedagem</h3>
+                    <p class="text-gray-400">Você pode hospedar sites estáticos em servidores simples ou até gratuitos (como GitHub Pages), porque eles exigem pouco processamento e armazenamento.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Processo -->
+    <section id="processo" class="bg-gray-800 py-20 md:py-28">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 reveal">
+                <h2 class="text-3xl md:text-4xl font-bold text-white">Como eu tiro seu projeto do papel</h2>
+                <p class="text-gray-400 mt-2">Um processo simples e transparente em 4 etapas.</p>
+            </div>
+            <div class="relative">
+                <!-- Linha do tempo -->
+                <div class="hidden md:block absolute top-1/2 left-0 w-full h-0.5 bg-gray-700 -translate-y-1/2"></div>
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-12 relative">
+                    <!-- Etapa 1 -->
+                    <div class="text-center reveal">
+                        <div class="relative inline-block">
+                             <div class="w-20 h-20 rounded-full bg-gray-900 border-2 accent-border flex items-center justify-center text-2xl font-bold accent-text">1</div>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mt-4 mb-1">Passo 1: Briefing e Planejamento</h3>
+                        <p class="text-gray-400 text-sm">Você me conta o que quer: objetivo, público, referências, textos e imagens. Juntos, alinhamos o que o site precisa ter.</p>
+                    </div>
+                     <!-- Etapa 2 -->
+                    <div class="text-center reveal" style="transition-delay: 150ms;">
+                        <div class="relative inline-block">
+                             <div class="w-20 h-20 rounded-full bg-gray-900 border-2 accent-border flex items-center justify-center text-2xl font-bold accent-text">2</div>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mt-4 mb-1">Passo 2: Criação e Desenvolvimento</h3>
+                        <p class="text-gray-400 text-sm">Eu crio o layout e a estrutura do site estático, com design moderno e responsivo, e te envio para aprovar.</p>
+                    </div>
+                     <!-- Etapa 3 -->
+                    <div class="text-center reveal" style="transition-delay: 300ms;">
+                        <div class="relative inline-block">
+                            <div class="w-20 h-20 rounded-full bg-gray-900 border-2 accent-border flex items-center justify-center text-2xl font-bold accent-text">3</div>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mt-4 mb-1">Passo 3: Ajustes e Finalização</h3>
+                        <p class="text-gray-400 text-sm">Você avalia, pede mudanças (se necessário) e eu faço as melhorias até ficar 100% aprovado.</p>
+                    </div>
+                     <!-- Etapa 4 -->
+                    <div class="text-center reveal" style="transition-delay: 450ms;">
+                        <div class="relative inline-block">
+                             <div class="w-20 h-20 rounded-full bg-gray-900 border-2 accent-border flex items-center justify-center text-2xl font-bold accent-text">4</div>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mt-4 mb-1">Passo 4: Publicação e Entrega</h3>
+                        <p class="text-gray-400 text-sm">O site vai ao ar no GitHub Pages (gratuito) ou com seu domínio personalizado, e eu entrego o link final para você divulgar.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Contato -->
+    <section id="contato" class="bg-gray-900 py-20 md:py-28">
+        <div class="container mx-auto px-6 text-center reveal">
+             <h2 class="text-3xl md:text-5xl font-black text-white leading-tight">Vamos tirar seu projeto do papel?</h2>
+             <p class="text-lg text-gray-400 my-6 max-w-2xl mx-auto">
+                Estou pronto para ouvir sobre seu projeto. Entre em contato para um orçamento sem compromisso.
+            </p>
+            <div class="flex flex-col md:flex-row justify-center items-center gap-6">
+                <a href="https://api.whatsapp.com/send?phone=5551984455704&text=Olá,%20William!%20Vi%20seu%20portfólio%20e%20gostaria%20de%20fazer%20um%20orçamento." target="_blank" class="flex items-center justify-center bg-green-500 text-white font-bold py-3 px-6 rounded-lg text-lg hover:bg-green-600 transition-colors w-full md:w-auto">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" class="mr-3"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21h.01c5.46 0 9.91-4.45 9.91-9.91s-4.45-9.91-9.92-9.91zM17.22 15.2c-.28-.14-1.65-.81-1.9-0.91s-.44-.14-.62.14c-.18.28-.72.91-.88 1.1s-.33.21-.61.07c-1.52-.84-2.53-1.52-3.8-3.34-.23-.33-.04-.51.1-.68.13-.14.28-.36.42-.48.14-.13.19-.23.28-.38.09-.15.05-.28-.02-.42s-.62-1.5-0.85-2.04c-.23-.55-.46-.47-.62-.48-.15-.01-.32-.01-.49-.01s-.42.07-.64.35c-.22.28-.86 1.05-.86 2.55s.88 2.96 1 3.17c.12.21 1.73 2.63 4.2 3.72 2.47 1.09 2.87.87 3.39.82.52-.05 1.65-.68 1.88-1.34.23-.66.23-1.23.16-1.34s-.28-.21-.56-.35z"></path></svg>
+                    Falar no WhatsApp
+                </a>
+                <a href="mailto:williamslv.98@gmail.com?subject=Orçamento%20de%20Site" class="flex items-center justify-center bg-gray-700 text-white font-bold py-3 px-6 rounded-lg text-lg hover:bg-gray-600 transition-colors w-full md:w-auto">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" class="mr-3"><path d="M2.5 4h19c.83 0 1.5.67 1.5 1.5v13c0 .83-.67 1.5-1.5 1.5h-19C1.67 20 1 19.33 1 18.5v-13C1 4.67 1.67 4 2.5 4zm0 2v.51l9.31 6.2c.4.27 1 .27 1.4 0L21.5 6.51V6h-19zM2.5 18h19V8.04l-9.31 6.2c.4.27 1 .27 1.4 0L2.5 8.04V18z"></path></svg>
+                    Enviar um E-mail
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer class="bg-black py-8">
+        <div class="container mx-auto px-6 text-center text-gray-500">
+            <div class="flex justify-center space-x-6 mb-4">
+                <a href="https://www.instagram.com/willssilveira/" target="_blank" rel="noopener noreferrer" class="hover:text-gray-300 transition-colors" aria-label="Instagram">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" role="img">
+                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.85s-.011 3.584-.069 4.85c-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07s-3.584-.012-4.85-.07c-3.252-.148-4.771-1.691-4.919-4.919-.058-1.265-.069-1.645-.069-4.85s.011-3.584.069-4.85c.149-3.225 1.664-4.771 4.919-4.919C8.416 2.175 8.796 2.163 12 2.163m0-2.163C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12s.014 3.667.072 4.947c.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24s3.667-.014 4.947-.072c4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.947s-.014-3.667-.072-4.947c-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zM12 16c-2.209 0-4-1.791-4-4s1.791-4 4-4 4 1.791 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44 1.441-.645 1.441-1.44-.645-1.44-1.441-1.44z"></path>
+                    </svg>
+                </a>
+                <a href="https://www.linkedin.com/in/williamssilveira/" target="_blank" rel="noopener noreferrer" class="hover:text-indigo-500 transition-colors" aria-label="LinkedIn">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" role="img">
+                        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5V5c0-2.761-2.238-5-5-5zM8 19H5V8h3v11zM6.5 6.732c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zM20 19h-3v-5.604c0-3.368-4-3.113-4 0V19h-3V8h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path>
+                    </svg>
+                </a>
+            </div>
+            <p>&copy; <span id="year"></span> William Silva. Sites de alta performance.</p>
+        </div>
+    </footer>
+
+    <!-- Botão Flutuante do WhatsApp -->
+    <a href="https://api.whatsapp.com/send?phone=5551984455704&text=Olá,%20William!%20Vi%20seu%20portfólio%20e%20gostaria%20de%20fazer%20um%20orçamento." target="_blank" class="fixed bottom-6 right-6 bg-green-500 w-16 h-16 rounded-full flex items-center justify-center text-white shadow-xl hover:bg-green-600 transition-all z-50">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-9 h-9" viewBox="0 0 448 512" fill="currentColor">
+            <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 221.9-99.6 221.9-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.8 0-67.6-9.2-96.2-26.2l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/>
+        </svg>
+    </a>
+
+    <script>
+        // Animação de revelação no scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+
+        const revealElements = document.querySelectorAll('.reveal');
+        revealElements.forEach(el => observer.observe(el));
+
+        // Ano no rodapé
+        document.getElementById('year').textContent = new Date().getFullYear();
+        
+        // Menu Mobile
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+
+</body>
+</html>
