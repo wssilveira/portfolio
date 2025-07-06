@@ -52,6 +52,18 @@
         .swiper-button-next, .swiper-button-prev {
             color: #fff;
             top: 40%;
+            transform: translateY(-50%);
+        }
+        .swiper-button-prev {
+           left: -10px;
+        }
+        .swiper-button-next {
+           right: -10px;
+        }
+
+        .swiper-button-next::after, .swiper-button-prev::after {
+            font-size: 24px !important;
+            font-weight: 900;
         }
         .swiper-pagination-bullet-active {
             background-color: var(--accent-color) !important;
@@ -148,56 +160,58 @@
                 <p class="text-gray-400 mt-2">Uma seleção dos meus trabalhos mais recentes.</p>
             </div>
             <!-- Swiper -->
-            <div class="swiper-container reveal">
-                <div class="swiper-wrapper">
-                    <!-- Slide 1 -->
-                    <div class="swiper-slide">
-                        <a href="https://wssilveira.github.io/clinica_podologica_pe_saudavel/" target="_blank" class="block rounded-xl overflow-hidden group portfolio-card h-full flex flex-col">
-                            <div class="relative overflow-hidden">
-                                <img src="https://i.ibb.co/QjNt77QM/Site.png" alt="Preview do site da Clínica Podológica Pé Saudável" class="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105">
-                                <div class="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 transition-opacity duration-500 portfolio-overlay">
-                                    <span class="text-white border-2 border-white px-6 py-2 rounded-full">Ver Projeto</span>
+            <div class="relative px-10">
+                <div class="swiper-container reveal">
+                    <div class="swiper-wrapper">
+                        <!-- Slide 1 -->
+                        <div class="swiper-slide">
+                            <a href="https://wssilveira.github.io/navalha_de_ouro/" target="_blank" class="block rounded-xl overflow-hidden group portfolio-card h-full flex flex-col">
+                                 <div class="relative overflow-hidden">
+                                    <img src="https://i.ibb.co/bMHrHSSw/Site.png" alt="Preview do site da barbearia Navalha de Ouro" class="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105">
+                                    <div class="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 transition-opacity duration-500 portfolio-overlay">
+                                        <span class="text-white border-2 border-white px-6 py-2 rounded-full">Ver Projeto</span>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="bg-gray-900 p-6 flex-grow">
-                                <h3 class="text-xl font-bold text-white">Clínica Podológica Pé Saudável</h3>
-                                <p class="text-gray-400 mt-1">Desenvolvimento de um site clean e intuitivo, focado em transmitir confiança e facilitar o agendamento de consultas para a clínica.</p>
-                            </div>
-                        </a>
-                    </div>
-                    <!-- Slide 2 -->
-                    <div class="swiper-slide">
-                        <a href="https://wssilveira.github.io/navalha_de_ouro/" target="_blank" class="block rounded-xl overflow-hidden group portfolio-card h-full flex flex-col">
-                             <div class="relative overflow-hidden">
-                                <img src="https://i.ibb.co/bMHrHSSw/Site.png" alt="Preview do site da barbearia Navalha de Ouro" class="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105">
-                                <div class="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 transition-opacity duration-500 portfolio-overlay">
-                                    <span class="text-white border-2 border-white px-6 py-2 rounded-full">Ver Projeto</span>
+                                <div class="bg-gray-900 p-6 flex-grow">
+                                    <h3 class="text-xl font-bold text-white">Barbearia Navalha de Ouro</h3>
+                                    <p class="text-gray-400 mt-1">Criação de uma identidade visual forte e masculina, alinhada ao posicionamento premium da barbearia para atrair o público certo.</p>
                                 </div>
-                            </div>
-                            <div class="bg-gray-900 p-6 flex-grow">
-                                <h3 class="text-xl font-bold text-white">Barbearia Navalha de Ouro</h3>
-                                <p class="text-gray-400 mt-1">Criação de uma identidade visual forte e masculina, alinhada ao posicionamento premium da barbearia para atrair o público certo.</p>
-                            </div>
-                        </a>
-                    </div>
-                    <!-- Slide 3 -->
-                    <div class="swiper-slide">
-                        <a href="https://wssilveira.github.io/rogeriotattoo/" target="_blank" class="block rounded-xl overflow-hidden group portfolio-card h-full flex flex-col">
-                             <div class="relative overflow-hidden">
-                                <img src="https://i.ibb.co/fG2YNf3x/Site.png" alt="Preview do site Rogério Tattoo Studio" class="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105">
-                                <div class="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 transition-opacity duration-500 portfolio-overlay">
-                                    <span class="text-white border-2 border-white px-6 py-2 rounded-full">Ver Projeto</span>
+                            </a>
+                        </div>
+                        <!-- Slide 2 -->
+                        <div class="swiper-slide">
+                            <a href="https://wssilveira.github.io/clinica_podologica_pe_saudavel/" target="_blank" class="block rounded-xl overflow-hidden group portfolio-card h-full flex flex-col">
+                                <div class="relative overflow-hidden">
+                                    <img src="https://i.ibb.co/QjNt77QM/Site.png" alt="Preview do site da Clínica Podológica Pé Saudável" class="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105">
+                                    <div class="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 transition-opacity duration-500 portfolio-overlay">
+                                        <span class="text-white border-2 border-white px-6 py-2 rounded-full">Ver Projeto</span>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="bg-gray-900 p-6 flex-grow">
-                                <h3 class="text-xl font-bold text-white">Rogério Tattoo Studio</h3>
-                                <p class="text-gray-400 mt-1">Site com design arrojado e galeria de trabalhos para um estúdio de tatuagem, focando em atrair e converter novos clientes.</p>
-                            </div>
-                        </a>
+                                <div class="bg-gray-900 p-6 flex-grow">
+                                    <h3 class="text-xl font-bold text-white">Clínica Podológica Pé Saudável</h3>
+                                    <p class="text-gray-400 mt-1">Desenvolvimento de um site clean e intuitivo, focado em transmitir confiança e facilitar o agendamento de consultas para a clínica.</p>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- Slide 3 -->
+                        <div class="swiper-slide">
+                            <a href="https://wssilveira.github.io/rogeriotattoo/" target="_blank" class="block rounded-xl overflow-hidden group portfolio-card h-full flex flex-col">
+                                 <div class="relative overflow-hidden">
+                                    <img src="https://i.ibb.co/fG2YNf3x/Site.png" alt="Preview do site Rogério Tattoo Studio" class="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105">
+                                    <div class="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 transition-opacity duration-500 portfolio-overlay">
+                                        <span class="text-white border-2 border-white px-6 py-2 rounded-full">Ver Projeto</span>
+                                    </div>
+                                </div>
+                                <div class="bg-gray-900 p-6 flex-grow">
+                                    <h3 class="text-xl font-bold text-white">Rogério Tattoo Studio</h3>
+                                    <p class="text-gray-400 mt-1">Site com design arrojado e galeria de trabalhos para um estúdio de tatuagem, focando em atrair e converter novos clientes.</p>
+                                </div>
+                            </a>
+                        </div>
                     </div>
+                    <!-- Add Pagination -->
+                    <div class="swiper-pagination"></div>
                 </div>
-                <!-- Add Pagination -->
-                <div class="swiper-pagination"></div>
                 <!-- Add Navigation -->
                 <div class="swiper-button-next"></div>
                 <div class="swiper-button-prev"></div>
@@ -301,14 +315,14 @@
             <p class="text-xl mt-4 mb-8 max-w-2xl mx-auto">
                 Para celebrar o lançamento dos meus serviços como freelancer, estou com uma oferta especial para os <strong>primeiros clientes</strong>!
             </p>
-            <div class="flex flex-wrap justify-center gap-8 mb-10">
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-8 mb-10 max-w-4xl mx-auto">
                 <div class="bg-white/20 p-4 rounded-lg text-center">
                     <p class="text-sm uppercase">Valores a partir de</p>
                     <p class="text-3xl font-bold">R$ 199,00</p>
                 </div>
                 <div class="bg-white/20 p-4 rounded-lg text-center">
                     <p class="text-sm uppercase">Entrega em até</p>
-                    <p class="text-3xl font-bold">3 Dias</p>
+                    <p class="text-3xl font-bold">5 Dias</p>
                 </div>
                  <div class="bg-white/20 p-4 rounded-lg text-center">
                     <p class="text-sm uppercase">Válido até</p>
